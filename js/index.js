@@ -2,9 +2,22 @@
 
 function updateSubtotal(product) {
   console.log('Calculating subtotal, yey!');
-
-  //... your code goes here
+  let price = document.querySelector('.price span')
+  let priceNumber = price.innerHTML;
+    // inputs have value
+  console.log(priceNumber);
+  let quantity = document.querySelector('.quantity input'); // remember input
+  let quantityNumber = quantity.getAttribute('value');  // and getAttribute :)
+  console.log(quantity);
+  console.log(quantityNumber);  // now we read the total even if it's not comming from the cart...?
+  Subtotal = priceNumber * quantityNumber;
+  
+  document.setAttribute('subtotal span', Subtotal); // Subtotal should be wrapped in span
+  updateSubtotal = Subtotal
+  
+  //... my code went here
 }
+
 
 function calculateAll() {
   // code in the following two lines is added just for testing purposes.
